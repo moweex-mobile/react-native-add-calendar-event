@@ -231,6 +231,7 @@ RCT_EXPORT_METHOD(presentEventEditingDialog:(NSDictionary *)options resolver:(RC
 
 - (void)presentViewController: (UIViewController *) controller {
     self.viewController = RCTPresentedViewController();
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
     [self.viewController presentViewController:controller animated:YES completion:nil];
 }
 
